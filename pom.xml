@@ -8,11 +8,11 @@
         <version>3.0.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.rubatino</groupId>
-    <artifactId>tcc</artifactId>
+    <groupId>com.bluevelvet</groupId>
+    <artifactId>web</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>tcc1-authentication-authorization</name>
-    <description>tcc1-authentication-authorization</description>
+    <name>blue_velvet_oficial</name>
+    <description>blue_velvet_oficial</description>
     <properties>
         <java.version>17</java.version>
     </properties>
