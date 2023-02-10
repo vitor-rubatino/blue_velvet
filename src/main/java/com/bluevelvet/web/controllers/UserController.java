@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping(name = "/users")
+@RequestMapping(path = "/users")
 public class UserController {
 
     @Autowired
@@ -23,7 +23,7 @@ public class UserController {
         return ResponseEntity.ok(userService.findAll());
     }
     /*---------------------------INSERE USUÁRIO--------------------------*/
-    @PostMapping(path = "/users")
+    @PostMapping
     public ResponseEntity<User> insert(@RequestBody User user){
         userService.insert(user);
         return new ResponseEntity<>(user, HttpStatus.CREATED);

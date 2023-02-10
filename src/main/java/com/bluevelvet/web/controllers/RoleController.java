@@ -1,7 +1,7 @@
 package com.bluevelvet.web.controllers;
 
-import com.bluevelvet.web.entities.Product;
-import com.bluevelvet.web.services.ProductService;
+import com.bluevelvet.web.entities.Role;
+import com.bluevelvet.web.services.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,15 +11,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping(path = "/products")
-public class ProductController {
+@RequestMapping(path = "/roles")
+public class RoleController {
 
     @Autowired
-    ProductService productService;
+    RoleService roleService;
 
+    /*---------------------------INSERE ROLE--------------------------*/
     @PostMapping
-    public ResponseEntity<Product> insert(@RequestBody Product product){
-        productService.insert(product);
-        return new ResponseEntity<>(product, HttpStatus.CREATED);
+    public ResponseEntity<Role> insert(@RequestBody Role role){
+        roleService.insert(role);
+        return new ResponseEntity<>(role, HttpStatus.CREATED);
     }
 }
