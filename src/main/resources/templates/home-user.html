@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Home - USER</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <h1>Hello USER!!</h1>
-  <form th:action="@{/logout}" method="post">
-
-      <a href="/"><h3>Voltar para a página inicial</h3></a>
-
-    <input type="submit" value="Sign Out">
-  </form>
+  <div class="container mt-5">
+    <h1 class="text-center">Hello USER!!</h1>
+    <div class="d-flex justify-content-center mt-5">
+      <form th:action="@{/logout}" method="post">
+        <a href="/" class="btn btn-primary mr-2">Voltar para a página inicial</a>
+        <input type="submit" value="Sign Out" class="btn btn-danger">
+      </form>
+    </div>
+  </div>
 </body>
 </html>
